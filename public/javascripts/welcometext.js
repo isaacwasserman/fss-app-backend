@@ -1,0 +1,1 @@
+$("#welcome").fitText(0.7);
