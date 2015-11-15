@@ -10,6 +10,7 @@ var MongoClient = require('mongodb').MongoClient;
 var day = require('./routes/day');
 var todays = require('./routes/todays');
 var fullweek = require('./routes/fullweek');
+var returncolors = require('./routes/returncolors');
 
 var app = express();
 
@@ -34,6 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/day', day);
 app.use('/todays', todays);
 app.use('/fullweek', fullweek);
+app.use('/returncolors', returncolors);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
