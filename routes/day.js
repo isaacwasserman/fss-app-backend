@@ -26,7 +26,7 @@ router.get('/', function(req, res){
   var splitdate = Date().split(" ");
   
   var googledate =  [splitdate[0], splitdate[1], parseInt(splitdate[2]) + ","];
-  var googledate =  ["Mon", "Nov", 16 + ","];
+//  var googledate =  ["Mon", "Nov", 16 + ","];
   
   for(i=0; i < events.length; i++){
     var eventdate = events[i].summary.$t.split(" ").slice(1,4);
