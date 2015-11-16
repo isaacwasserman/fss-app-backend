@@ -14,7 +14,9 @@ var getSchedules = function(callback) {
 
 router.get('/:id', function(req, res){
   request(url, function(err, res2, body) {
-    var schedules = JSON.parse(body.substring(15));
+    
+    var schedules = JSON.parse(body);
+    console.log(schedules["Isaac Riley-Wasserman"]);
     
     var key, count = 0;
     for(key in schedules) {
@@ -27,6 +29,7 @@ router.get('/:id', function(req, res){
     var response = "Not Found";
     
     for (var key in schedules) {
+      
       if (schedules.hasOwnProperty(key) && schedules[key]["id"] == req.params.id) {
         var response = schedules[key];
       }
