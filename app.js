@@ -12,6 +12,7 @@ var day = require('./routes/day');
 var todays = require('./routes/todays');
 var fullweek = require('./routes/fullweek');
 var returncolors = require('./routes/returncolors');
+var everything = require('./routes/everything');
 
 var app = express();
 
@@ -37,6 +38,7 @@ app.use('/day', day);
 app.use('/todays', todays);
 app.use('/fullweek', fullweek);
 app.use('/returncolors', returncolors);
+app.use('/everything', everything);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
